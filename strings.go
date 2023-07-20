@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	
+	"strings"
 	"unicode/utf8"
 )
 
@@ -63,4 +65,33 @@ func main() {
  m := utf8.RuneCountInString(str2) 
 
  fmt.Println(n ,m) 
+
+ result := strings.Contains("I love programming" , "I") 
+
+fmt.Println(result) ;
+
+result =  strings.ContainsRune("I love orgram" ,'i')
+fmt.Println(result)
+
+
+ number :=  strings.Count("cheese" ,"e") ;
+fmt.Println(number)
+
+    
+ fmt.Println(strings.Compare(s1 , s2))
+  
+ myStr :=  strings.Repeat(str2 , 10) ;
+ fmt.Println(myStr)
+
+
+ s :=  strings.Split("hel/loxw/orl/d" , "/") 
+ 
+ ver :=  strings.Join(s,"/") 
+ fmt.Println(ver)
+
+ somstring :=  "Orange Green \n Blue Yellow" 
+ fields :=  strings.Fields(somstring) ;
+ fmt.Println(fields[0])
+ 
+ fmt.Println(strings.Trim("   fdf   " , " "))
 	}
